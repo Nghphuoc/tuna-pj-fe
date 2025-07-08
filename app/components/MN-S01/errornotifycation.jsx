@@ -1,7 +1,7 @@
 "use client";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 
-const ErrorNotification = ({ message, onClose }) => {
+const ErrorNotification = ({ message }) => {
     const notifycation = message || "処理に失敗しました。お手数ですが再度お試しください。解消しない場合はサポートまでお問い合わせください。";
 
     return (
