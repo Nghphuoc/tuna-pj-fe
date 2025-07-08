@@ -7,7 +7,7 @@ import { GoDatabase } from "react-icons/go";
 import { GiAutoRepair } from "react-icons/gi";
 import Link from "next/link";
 
-const Navigation = () => {
+const NavigationFullItems = () => {
     const foreignFishVessel = "外国漁船漁獲情報システム";
     const logout = "ログアウト";
 
@@ -53,4 +53,4 @@ const Navigation = () => {
     );
 };
 
-export default Navigation;
+export default NavigationFullItems;
