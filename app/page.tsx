@@ -1,5 +1,5 @@
 "use client";
-import Navigation from "@/app/Components/navigation";
+import Navigation from "@/app/Components/navigationfullitems";
 
 export default function Home() {
   return (
