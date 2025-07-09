@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ErrorNotification from "@/app/Components/MN-S01/errornotifycation";
+import ErrorNotification from "../errornotifycation";
 import Dialog from "../dialog";
 
 const FromImportExcel = () => {
