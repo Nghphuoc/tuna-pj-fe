@@ -65,7 +65,7 @@ const FromImportExcel = () => {
         <div className="w-full border border-black p-4">
           <h2 className="text-md font-semibold mb-2">{title}</h2>
           <hr className="-mx-4 w-[calc(100%+2rem)] border-t border-black" />
-          <div className="pt-1 pb-1 w-full">
+          <div className="pt-2 pb-1 w-full">
             {showError && (
               <ErrorNotification message={messageError} />
             )}
