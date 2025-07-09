@@ -1,6 +1,6 @@
 "use client";
 
-const Dialog = ({ notifycation, onClose }) => {
+const Dialog = ({ notifycation, onClose, onAccept }) => {
     const actionAccept = "はい";
     const actionCancel = "いいえ";
     const message = notifycation || "入力された内容で書類を追加アップロードします。よろしいですか？";
@@ -23,7 +23,7 @@ const Dialog = ({ notifycation, onClose }) => {
                     {/* Buttons */}
                     <div className="flex flex-row items-center gap-4 justify-center">
                         <button
-                            onClick={onClose}
+                            onClick={onAccept}
                             className="bg-blue-500 text-white px-6 py-1 rounded-md hover:bg-blue-600 text-sm"
                         >
                             {actionAccept}
