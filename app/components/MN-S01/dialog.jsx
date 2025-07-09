@@ -18,7 +18,7 @@ const Dialog = ({ notifycation, onClose, onAccept }) => {
                     </button>
 
                     {/* Message */}
-                    <p className="text-sm mb-6">{message}</p>
+                    <p className="text-sm font-semibold mb-6">{message}</p>
 
                     {/* Buttons */}
                     <div className="flex flex-row items-center gap-4 justify-center">
