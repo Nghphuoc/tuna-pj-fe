@@ -24,7 +24,7 @@ const Dialog = ({ notifycation, onClose, onAccept }) => {
                     <div className="flex flex-row items-center gap-4 justify-center">
                         <button
                             onClick={onAccept}
-                            className="bg-blue-500 text-white px-6 py-1 rounded-md hover:bg-blue-600 text-sm"
+                            className="bg-blue-500 text-white px-8 py-1 rounded-md hover:bg-blue-600 text-sm"
                         >
                             {actionAccept}
                         </button>
