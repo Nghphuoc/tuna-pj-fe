@@ -1,6 +1,6 @@
 "use client";
 
-import FromImportExcel from "@/app/Components/MN-S01/fromimportexcel";
+import FromImportExcel from "../../components/MN-S01/fromimportexcel";
 
 const Page = () => {
     return (
