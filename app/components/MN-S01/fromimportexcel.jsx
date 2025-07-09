@@ -54,6 +54,7 @@ const FromImportExcel = () => {
 
   const onCloseDialog = () => {
     setShowDialog(false);
+    setShowError(true);
     setFileName("");
   };
 
@@ -92,14 +93,15 @@ const FromImportExcel = () => {
               />
             </div>
           </div>
-        </div>
-        <div className="text-end items-end mt-4">
+          <div className="text-end items-end mt-4">
           <button className={`${fileName ? "bg-blue-500" : "bg-blue-300"} text-white px-4 py-1 rounded`} disabled={!fileName}
             onClick={() => handleSubmit(fileName)}
           >
             {buttonSubmit}
           </button>
         </div>
+        </div>
+        
       </div>
     </>
   );
