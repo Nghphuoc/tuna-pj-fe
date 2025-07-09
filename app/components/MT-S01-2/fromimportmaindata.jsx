@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import ErrorNotification from "@/app/Components/MN-S01/errornotifycation";
-import Dialog from "../MN-S01/dialog";
+import Dialog from "../dialog";
 import { useRouter } from 'next/navigation';
 
 const FromImportMainData = () => {
@@ -115,12 +115,12 @@ const FromImportMainData = () => {
                         </div>
                     </div>
                     <div className="flex justify-end items-center gap-x-3 mt-4">
-                        <button className={` bg-blue-500 text-white px-8 py-1 rounded`} 
-                            onClick={()=> handleReturnPage()}
+                        <button className={` bg-blue-500 text-white px-8 py-1 rounded`}
+                            onClick={() => handleReturnPage()}
                         >
                             {buttonReturn}
                         </button>
-                        
+
                         <button className={`${fileName ? "bg-blue-500" : "bg-blue-300"} text-white px-4 py-1 rounded`} disabled={!fileName}
                             onClick={() => handleSubmit(fileName)}
                         >

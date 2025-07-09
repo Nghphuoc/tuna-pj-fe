@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import ErrorNotification from "@/app/Components/MN-S01/errornotifycation";
-import Dialog from "./dialog";
+import Dialog from "../dialog";
 
 const FromImportExcel = () => {
   const [showError, setShowError] = useState(false);
@@ -94,14 +94,14 @@ const FromImportExcel = () => {
             </div>
           </div>
           <div className="text-end items-end mt-4">
-          <button className={`${fileName ? "bg-blue-500" : "bg-blue-300"} text-white px-4 py-1 rounded`} disabled={!fileName}
-            onClick={() => handleSubmit(fileName)}
-          >
-            {buttonSubmit}
-          </button>
+            <button className={`${fileName ? "bg-blue-500" : "bg-blue-300"} text-white px-4 py-1 rounded`} disabled={!fileName}
+              onClick={() => handleSubmit(fileName)}
+            >
+              {buttonSubmit}
+            </button>
+          </div>
         </div>
-        </div>
-        
+
       </div>
     </>
   );
