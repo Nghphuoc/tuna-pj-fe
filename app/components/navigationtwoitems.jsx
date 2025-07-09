@@ -8,8 +8,8 @@ const NavigationTwoItems = () => {
     const logout = "ログアウト";
 
     const navItems = [
-        { icon: <LiaChartPieSolid className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "報告処理", action: "/#" },
-        { icon: <GoDatabase className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "データ検索", action: "/#" },
+        { icon: <LiaChartPieSolid className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "報告処理", action: "/chart" },
+        { icon: <GoDatabase className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "データ検索", action: "/data" },
     ];
 
     return (

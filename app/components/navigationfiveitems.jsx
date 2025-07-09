@@ -11,11 +11,11 @@ const NavigationFiveItems = () => {
     const logout = "ログアウト";
 
     const navItems = [
-        { icon: <LuUpload className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "新規アップロード", action: "/#" },
-        { icon: <BsListCheck className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "ステータス一覧", action: "/#" },
-        { icon: <LiaChartPieSolid className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "報告処理", action: "/#" },
-        { icon: <GoDatabase className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "データ検索", action: "/#" },
-        { icon: <FaUserLarge className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "ユーザー設定", action: "/#" },
+        { icon: <LuUpload className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "新規アップロード", action: "/upload" },
+        { icon: <BsListCheck className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "ステータス一覧", action: "/status" },
+        { icon: <LiaChartPieSolid className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "報告処理", action: "/chart" },
+        { icon: <GoDatabase className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "データ検索", action: "/data" },
+        { icon: <FaUserLarge className="w-[20px] h-[20px] md:w-[25px] md:h-[25px]" />, label: "ユーザー設定", action: "/user" },
     ];
 
     return (
