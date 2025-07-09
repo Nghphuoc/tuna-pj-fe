@@ -2,6 +2,7 @@
 import { useState } from "react";
 import ErrorNotification from "@/app/Components/MN-S01/errornotifycation";
 import Dialog from "../MN-S01/dialog";
+import { useRouter } from 'next/navigation';
 
 const FromImportMainData = () => {
 
@@ -9,10 +10,13 @@ const FromImportMainData = () => {
     const [fileName, setFileName] = useState("");
     const [showDialog, setShowDialog] = useState(false);
 
+    const router = useRouter();
+
     const title = "マスターデータ取込";
     const subTitle = "マスター種別";
     const titleFile = "ここにファイルをドロップまたは";
     const buttonSubmit = "アップロード";
+    const buttonReturn = "戻る";
     const buttonSubmitFile = "ファイルを選択";
     const messageError = "処理に失敗しました。お手数ですが再度お試しください。解消しない場合はサポートまでお問い合わせください。";
 
@@ -46,6 +50,10 @@ const FromImportMainData = () => {
             return;
         }
         setShowDialog(true);
+    };
+
+    const handleReturnPage = () => {
+        router.push("/#")
     };
 
     const onAcceptDialog = () => {
@@ -106,7 +114,13 @@ const FromImportMainData = () => {
                             />
                         </div>
                     </div>
-                    <div className="text-end items-end mt-4">
+                    <div className="flex justify-end items-center gap-x-3 mt-4">
+                        <button className={` bg-blue-500 text-white px-8 py-1 rounded`} 
+                            onClick={()=> handleReturnPage()}
+                        >
+                            {buttonReturn}
+                        </button>
+                        
                         <button className={`${fileName ? "bg-blue-500" : "bg-blue-300"} text-white px-4 py-1 rounded`} disabled={!fileName}
                             onClick={() => handleSubmit(fileName)}
                         >
