@@ -71,6 +71,7 @@ const FromImportExcel = () => {
               <ErrorNotification message={messageError} />
             )}
           </div>
+          
           <div className="bg-[#dee1ec] border border-dashed border-gray-500 rounded-xl flex flex-col items-center justify-center text-center px-4 h-[355px]">
             {/* hidden title if have file */}
             <label className={`${fileName ? "hidden" : "block"} text-gray-600 mb-2 font-semibold`}>
@@ -93,6 +94,7 @@ const FromImportExcel = () => {
               />
             </div>
           </div>
+
           <div className="text-end items-end mt-4">
             <button className={`${fileName ? "bg-blue-500" : "bg-blue-300"} text-white px-4 py-1 rounded`} disabled={!fileName}
               onClick={() => handleSubmit(fileName)}
@@ -101,7 +103,6 @@ const FromImportExcel = () => {
             </button>
           </div>
         </div>
-
       </div>
     </>
   );
