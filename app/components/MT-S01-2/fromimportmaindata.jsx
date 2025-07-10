@@ -83,7 +83,7 @@ const FromImportMainData = () => {
                         )}
                         <div className="pb-2">
                             <p className="pt-2 pb-1 text-sm font-semibold">{subTitle}</p>
-                            <DropdownSelected className="pt-10 w-1/6" options={valueOption} value={selectedValue} onChange={(value) => setSelectedValue(value)} />
+                            <DropdownSelected className="pt-10 w-1/6" options={valueOption} value={selectedValue} onChange={(value) => setSelectedValue(value)} width="w-1/6" />
                         </div>
                     </div>
 
