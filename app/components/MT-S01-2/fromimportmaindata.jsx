@@ -1,17 +1,16 @@
 "use client";
 import { useState } from "react";
-import ErrorNotification from "@/app/Components/MN-S01/errornotifycation";
+import ErrorNotification from "../errornotifycation";
 import Dialog from "../dialog";
 import { useRouter } from 'next/navigation';
+import DropdownSelected from "../dropdownselected";
 
 const FromImportMainData = () => {
-
     const [showError, setShowError] = useState(false);
     const [fileName, setFileName] = useState("");
     const [showDialog, setShowDialog] = useState(false);
-
+    const [selectedValue, setSelectedValue] = useState("");
     const router = useRouter();
-
     const title = "マスターデータ取込";
     const subTitle = "マスター種別";
     const titleFile = "ここにファイルをドロップまたは";
@@ -19,10 +18,13 @@ const FromImportMainData = () => {
     const buttonReturn = "戻る";
     const buttonSubmitFile = "ファイルを選択";
     const messageError = "処理に失敗しました。お手数ですが再度お試しください。解消しない場合はサポートまでお問い合わせください。";
+    const valueOption = [
+        { value: "報告期間テーブル", label: "報告期間テーブル" },
+    ]
+
 
     const handleFileChange = (e) => {
         const file = e.target.files?.[0];
-
         if (file) {
             const allowedTypes = [
                 "application/vnd.ms-excel",
@@ -46,7 +48,6 @@ const FromImportMainData = () => {
 
     const handleSubmit = (fileName) => {
         if (!fileName) {
-            // check if fileName is empty return;
             return;
         }
         setShowDialog(true);
@@ -82,16 +83,10 @@ const FromImportMainData = () => {
                         )}
                         <div className="pb-2">
                             <p className="pt-2 pb-1 text-sm font-semibold">{subTitle}</p>
-                            <select
-                                className="w-1/6 py-2 pl-4 pr-10 rounded-md border border-gray-400 focus:outline-none text-sm"
-                                name=""
-                                id=""
-                            >
-                                <option className="text-black text-sm bg-gray-100">報告期間テーブル</option>
-                                <option className="text-black text-sm bg-gray-100">月次レポート</option>
-                            </select>
+                            <DropdownSelected className="pt-10 w-1/6" options={valueOption} value={selectedValue} onChange={(value) => setSelectedValue(value)} />
                         </div>
                     </div>
+
                     <div className="bg-[#dee1ec] border border-dashed border-gray-500 rounded-xl flex flex-col items-center justify-center text-center px-4 h-[355px]">
                         {/* hidden title if have file */}
                         <label className={`${fileName ? "hidden" : "block"} text-gray-600 mb-2 font-semibold`}>
@@ -114,6 +109,7 @@ const FromImportMainData = () => {
                             />
                         </div>
                     </div>
+
                     <div className="flex justify-end items-center gap-x-3 mt-4">
                         <button className={` bg-blue-500 text-white px-8 py-1 rounded`}
                             onClick={() => handleReturnPage()}
@@ -128,7 +124,6 @@ const FromImportMainData = () => {
                         </button>
                     </div>
                 </div>
-
             </div>
         </>
     );
