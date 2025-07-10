@@ -10,20 +10,21 @@ interface DropdownSelectedProps {
     options: Option[];
     value?: string;
     onChange?: (value: string) => void;
+    width?: string;
 }
 
 const DropdownSelected: React.FC<DropdownSelectedProps> = ({
     options,
     value,
     onChange,
-
+    width,
 }) => {
     const [officialRegistration, setOfficialRegistration] = useState(value || options[0]?.label || '');
     const [dropdownOpen, setDropdownOpen] = useState(false);
     return (
         <div>
             <div>
-                <div className="flex items-center border rounded-lg border-gray-300 h-[34px] text-left cursor-pointer w-1/6"
+                <div className={`flex items-center border rounded-lg border-gray-300 h-[34px] text-left cursor-pointer ${width}`}
                     onClick={() => setDropdownOpen((open) => !open)}>
                     <button
                         type="button"
