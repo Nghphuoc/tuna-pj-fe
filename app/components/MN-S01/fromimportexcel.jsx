@@ -3,12 +3,11 @@ import { useState } from "react";
 import ErrorNotification from "../errornotifycation";
 import Dialog from "../dialog";
 
-const FromImportExcel = () => {
+const FromImportExcel = ({title}) => {
   const [showError, setShowError] = useState(false);
   const [fileName, setFileName] = useState("");
   const [showDialog, setShowDialog] = useState(false);
 
-  const title = "Excelデータ取込";
   const titleFile = "ここにファイルをドロップまたは";
   const buttonSubmit = "アップロード";
   const buttonSubmitFile = "ファイルを選択";

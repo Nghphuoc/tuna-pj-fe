@@ -3,9 +3,10 @@
 import FromImportExcel from "../../components/MN-S01/fromimportexcel";
 
 const Page = () => {
+    const title = "Excelデータ取込";
     return (
         <>
-            <FromImportExcel />
+            <FromImportExcel title={title} />
         </>
     );
 };
