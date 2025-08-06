@@ -24,7 +24,7 @@ const DropdownSelected: React.FC<DropdownSelectedProps> = ({
     return (
         <div>
             <div>
-                <div className={`flex items-center border rounded-lg border-gray-300 h-[34px] text-left cursor-pointer ${width}`}
+                <div className={`flex items-center border rounded-lg border-gray-400 px-3 py-2 text-left cursor-pointer ${width}`}
                     onClick={() => setDropdownOpen((open) => !open)}>
                     <button
                         type="button"
