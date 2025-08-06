@@ -1,9 +1,10 @@
+import UserRegistrationFromInput from "../../components/MT-S01-5/userregistrationfrominput";
 
 
 const UserPage = () => {
     return (
         <>
-        <p className="text-center items-center">User Page</p>
+            <UserRegistrationFromInput />
         </>
     );
 }
