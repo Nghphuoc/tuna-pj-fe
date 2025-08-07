@@ -1,9 +1,8 @@
 "use client";
 
-const Dialog = ({ notifycation, onClose, onAccept }) => {
+const Modal = ({ notifycation, onClose, onAccept }) => {
     const actionAccept = "はい";
     const actionCancel = "いいえ";
-    const message = notifycation || "入力された内容で書類を追加アップロードします。よろしいですか？";
 
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -18,7 +17,7 @@ const Dialog = ({ notifycation, onClose, onAccept }) => {
                     </button>
 
                     {/* Message */}
-                    <p className="text-sm font-semibold mb-6">{message}</p>
+                    <p className="text-sm font-semibold mb-6">{notifycation}</p>
 
                     {/* Buttons */}
                     <div className="flex flex-row items-center gap-4 justify-center">
@@ -41,4 +40,4 @@ const Dialog = ({ notifycation, onClose, onAccept }) => {
     );
 };
 
-export default Dialog;
+export default Modal;

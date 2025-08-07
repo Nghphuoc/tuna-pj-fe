@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import ErrorNotification from "../errornotifycation";
-import DropdownSelected from "../dropdownselected";
+import ErrorNotification from "../ErrorNotifycation";
+import DropdownSelected from "../DropdownSelected";
 
 const UserRegistrationFromInput = () => {
     const title = "チェック条件";

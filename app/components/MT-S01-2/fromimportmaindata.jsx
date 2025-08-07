@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import ErrorNotification from "../errornotifycation";
-import Dialog from "../dialog";
+import ErrorNotification from "../ErrorNotifycation";
+import Dialog from "../Modal";
 import { useRouter } from 'next/navigation';
-import DropdownSelected from "../dropdownselected";
+import DropdownSelected from "../DropdownSelected";
 
 const FromImportMainData = () => {
     const [showError, setShowError] = useState(false);

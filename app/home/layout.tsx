@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import NavigationFullItems from "../components/navigationfullitems";
+import NavigationFullItems from "../components/Navigationfullitems";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });

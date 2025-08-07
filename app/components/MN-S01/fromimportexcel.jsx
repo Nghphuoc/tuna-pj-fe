@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
-import ErrorNotification from "../errornotifycation";
-import Dialog from "../dialog";
+import ErrorNotification from "../ErrorNotifycation";
+import Modal from "../Modal";
 
-const FromImportExcel = ({title}) => {
+const FromImportExcel = ({ title }) => {
   const [showError, setShowError] = useState(false);
   const [fileName, setFileName] = useState("");
   const [showDialog, setShowDialog] = useState(false);
-
+  const message = "入力された内容で書類を追加アップロードします。よろしいですか？";
   const titleFile = "ここにファイルをドロップまたは";
   const buttonSubmit = "アップロード";
   const buttonSubmitFile = "ファイルを選択";
@@ -59,7 +59,7 @@ const FromImportExcel = ({title}) => {
 
   return (
     <>
-      {showDialog && <Dialog onClose={onCloseDialog} onAccept={onAcceptDialog}></Dialog>}
+      {showDialog && <Modal onClose={onCloseDialog} onAccept={onAcceptDialog} notifycation={message}></Modal>}
 
       <div className="w-full h-full flex-col justify-center items-center p-5">
         <div className="w-full border border-black p-4">
@@ -70,7 +70,7 @@ const FromImportExcel = ({title}) => {
               <ErrorNotification message={messageError} />
             )}
           </div>
-          
+
           <div className="bg-[#dee1ec] border border-dashed border-gray-500 rounded-xl flex flex-col items-center justify-center text-center px-4 h-[355px]">
             {/* hidden title if have file */}
             <label className={`${fileName ? "hidden" : "block"} text-gray-600 mb-2 font-semibold`}>
