@@ -1,6 +1,6 @@
 "use client";
 
-import FromImportExcel from "../../components/MN-S01/Fromimportexcel";
+import FromImportExcel from "../../components/MN-S01/FromImportExcel";
 
 const Page = () => {
     const title = "Excelデータ取込";
