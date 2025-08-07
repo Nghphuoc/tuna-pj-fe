@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import ErrorNotification from "../ErrorNotifycation";
-import Dialog from "../Modal";
+import Modal from "../Modal";
 import { useRouter } from 'next/navigation';
 import DropdownSelected from "../DropdownSelected";
 
@@ -71,7 +71,7 @@ const FromImportMainData = () => {
 
     return (
         <>
-            {showDialog && <Dialog onClose={onCloseDialog} onAccept={onAcceptDialog}></Dialog>}
+            {showDialog && <Modal onClose={onCloseDialog} onAccept={onAcceptDialog}></Modal>}
 
             <div className="w-full h-full flex-col justify-center items-center p-5">
                 <div className="w-full border border-black p-4">
